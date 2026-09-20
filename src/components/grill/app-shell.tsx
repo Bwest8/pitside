@@ -439,7 +439,7 @@ function SettingsView() {
             onto the Blade.
           </li>
           <li>ZimaOS Apps → + → Install a customized app → import docker-compose.yml.</li>
-          <li>Open it from your phone at the Blade’s address, port 8080.</li>
+          <li>Open it from your phone at the Blade’s address, port 42069.</li>
         </ol>
       </div>
     </section>

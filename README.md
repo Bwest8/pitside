@@ -10,7 +10,7 @@ Keep the Blade and the grill on the same Wi-Fi. Phones on that network open the 
 
 1. Copy this folder onto the Blade.
 2. **Apps → + → Install a customized app** → import `docker-compose.yml`.
-3. Start the app. Open it from your phone at `http://<blade-address>:8080`.
+3. Start the app. Open it from your phone at `http://<blade-address>:42069`.
 
 Or from a shell on the Blade:
 
@@ -20,7 +20,7 @@ cd pitside
 docker compose up -d --build
 ```
 
-Then open `http://<blade-address>:8080`.
+Then open `http://<blade-address>:42069`.
 
 ### What this does today
 
@@ -36,4 +36,4 @@ A phone browser still cannot talk to the grill by itself. The ZimaBlade *can*, b
 docker compose up -d --build
 ```
 
-The container listens on port 8080.
+The Blade publishes **42069**. Inside the container the deck still listens on 8080.
