@@ -12,9 +12,11 @@ Keep the Blade and the grill on the same Wi-Fi. Phones on that network open the 
 2. **Apps → + → Install a customized app** → import `docker-compose.yml`.
 3. Start the app. Open it from your phone at `http://<blade-address>:8080`.
 
-Or from a shell on the Blade, in this folder:
+Or from a shell on the Blade:
 
 ```sh
+git clone https://github.com/Bwest8/pitside.git
+cd pitside
 docker compose up -d --build
 ```
 

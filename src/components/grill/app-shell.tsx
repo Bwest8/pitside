@@ -428,7 +428,16 @@ function SettingsView() {
           the 820’s LAN address above.
         </p>
         <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm text-muted">
-          <li>Drop the PitSide folder on the Blade (Dockerfile + docker-compose.yml inside).</li>
+          <li>
+            Clone{" "}
+            <a
+              href="https://github.com/Bwest8/pitside"
+              className="text-heat underline-offset-2 hover:underline"
+            >
+              github.com/Bwest8/pitside
+            </a>{" "}
+            onto the Blade.
+          </li>
           <li>ZimaOS Apps → + → Install a customized app → import docker-compose.yml.</li>
           <li>Open it from your phone at the Blade’s address, port 8080.</li>
         </ol>
