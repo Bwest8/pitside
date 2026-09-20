@@ -1,7 +1,5 @@
-# PitSide — Sportsman 820 Wi-Fi deck
-# ZimaOS: copy this folder onto the Blade, then
-# Apps → + → Install a customized app → import this file.
-# Phone: http://<blade-address>:42069
+# PitSide — PB0820SPW
+# http://<host>:42069
 
 services:
   pitside:

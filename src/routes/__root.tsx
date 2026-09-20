@@ -16,7 +16,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Pit-side command deck for Pit Boss pellet grills. Run cooks, watch probes, and keep a journal.",
+          "Controller for the Pit Boss Sportsman 820 Wi-Fi.",
       },
     ],
     links: [

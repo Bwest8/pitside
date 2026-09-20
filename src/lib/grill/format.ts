@@ -28,7 +28,7 @@ export function statusLabel(status: GrillStatus, actual?: number, setpoint?: num
       return "Igniting";
     case "heating":
       if (actual != null && setpoint != null && actual > setpoint + 10) return "Settling";
-      return "Coming up";
+      return "Heating";
     case "at-temp":
       return "At temp";
     case "cooling":

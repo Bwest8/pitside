@@ -81,31 +81,31 @@ export const useGrillStore = create<GrillStore>()(
         const toasts: string[] = [];
 
         if (prev.status === "igniting" && next.status !== "igniting") {
-          toasts.push("Hot rod is out. Grill is coming up to temp.");
+          toasts.push("Ignition complete.");
         }
         if (prev.status !== "at-temp" && next.status === "at-temp") {
-          toasts.push(`Pit settled near ${Math.round(next.setpoint)}°.`);
+          toasts.push(`At ${Math.round(next.setpoint)}°.`);
         }
         if (!prev.probes[0].stalling && next.probes[0].stalling) {
-          toasts.push(`${next.probes[0].name} is in the stall. Let it ride.`);
+          toasts.push(`Probe ${next.probes[0].id} stall.`);
         }
         if (!prev.probes[0].hitAt && next.probes[0].hitAt) {
-          toasts.push(`${next.probes[0].name} hit ${Math.round(next.probes[0].target ?? 0)}°.`);
+          toasts.push(`Probe ${next.probes[0].id} at ${Math.round(next.probes[0].target ?? 0)}°.`);
         }
         if (!prev.probes[1].hitAt && next.probes[1].hitAt) {
-          toasts.push(`${next.probes[1].name} hit ${Math.round(next.probes[1].target ?? 0)}°.`);
+          toasts.push(`Probe ${next.probes[1].id} at ${Math.round(next.probes[1].target ?? 0)}°.`);
         }
         if (prev.hopperPct > 15 && next.hopperPct <= 15) {
-          toasts.push("Hopper is getting low.");
+          toasts.push("Hopper low.");
         }
         if (prev.status !== "off" && next.status === "off") {
-          toasts.push("Cool-down finished. Grill is on standby.");
+          toasts.push("Standby.");
         }
 
         const program = next.programId ? getProgram(next.programId) : null;
         if (program && next.stageIndex !== prev.stageIndex) {
           const stage = program.stages[next.stageIndex];
-          if (stage) toasts.push(`Stage: ${stage.name}. ${stage.note}`);
+          if (stage) toasts.push(stage.name);
         }
 
         set({ sim: next });
